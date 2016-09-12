@@ -1,0 +1,8 @@
+declare -r COL_BLACK='\E[30;47m'
+declare -r COL_RED='\E[31;47m'
+declare -r COL_GREEN='\E[32;47m'
+declare -r COL_YELLOW='\E[33;47m'
+declare -r COL_BLUE='\E[34;47m'
+declare -r COL_MAGENTA='\E[35;47m'
+declare -r COL_CYAN='\E[36;47m'
+declare -r COL_WHITE='\E[37;47m'
