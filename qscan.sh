@@ -44,7 +44,7 @@ scan_envvar() {
         if [ -z ${var+x} ]; then
             printf '%s is not set.\n' "${var}" > qdetailed.log;
         else
-            printf '%s ==> "%s"' "${var}" "${!var}" ;
+            printf '%s ==> "%s"' "${var}" "${!var}";
             echo;
         fi
     done
@@ -52,17 +52,17 @@ scan_envvar() {
 }
 
 scan_network() {
-    qtitle 'INTERNET';
+    qtitle 'NETWORK';
 
     test_ip='8.8.8.8';
     test_url='https://google.com';
 
-    ping -c 1 "${}" > qdetailed.log;
+    ping -c 1 "${test_ip}" > qdetailed.log;
     if [ "$?" ]; then
-        echo 'Ping 8.8.8.8 ==> success'
+        echo "Ping ${test_ip} ==> success"
     fi
 
-    curl 'https://google.com' > /dev/null
+    curl "${test_url}" > /dev/null;
 
 }
 
