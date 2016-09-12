@@ -29,7 +29,7 @@ scan_setup() {
 scan_kernel() {
     qtitle 'KERNEL / DISTRO VERSIONS'
 
-    uname -a;
+    printf 'Kernel Version ==> "%s"\n' "$( uname -r )";
 
 }
 
